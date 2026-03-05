@@ -1,5 +1,12 @@
 # WebXR Hello World - Offline
 
+## Requisitos
+
+- **Node.js** v14 ou superior — [nodejs.org](https://nodejs.org)
+- **OpenSSL** (para gerar certificados) — incluso no Git for Windows: [git-scm.com](https://git-scm.com)
+- **Celular Android** com Chrome e suporte a ARCore — [lista de dispositivos](https://developers.google.com/ar/devices)
+- PC e celular na **mesma rede Wi-Fi**
+
 ## Como rodar
 
 ### 1. Gerar certificados SSL
