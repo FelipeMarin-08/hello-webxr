@@ -73,15 +73,34 @@
                 })
             );
 
-            // Criar um cubo de exemplo
-            const geometry = new THREE.BoxGeometry(0.1, 0.1, 0.1);
+            // ==========================================
+            // CÓDIGO MODIFICADO AQUI
+            // ==========================================
+            
+            // Modificação 3: Trocando a forma para um Cilindro
+            const geometry = new THREE.CylinderGeometry(0.05, 0.05, 0.15, 32);
             const material = new THREE.MeshPhongMaterial({
                 color: 0x00ff00,
                 shininess: 100
             });
+            
+            // Mantive o nome da variável "cube" para seguir a estrutura, 
+            // mas agora ele é um cilindro achatado e rotacionado!
             const cube = new THREE.Mesh(geometry, material);
             cube.position.set(0, 0, -0.5);
+
+            // Modificação 1: Rotação
+            cube.rotation.x = Math.PI / 4; // 45 graus no eixo X
+            cube.rotation.y = Math.PI / 4; // 45 graus no eixo Y
+
+            // Modificação 2: Escala
+            cube.scale.set(2, 0.5, 1); // Dobra no X, metade no Y, normal no Z
+
             scene.add(cube);
+            
+            // ==========================================
+            // FIM DO CÓDIGO MODIFICADO
+            // ==========================================
 
             // Controller para interação
             controller = renderer.xr.getController(0);
